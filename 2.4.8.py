@@ -18,7 +18,8 @@ try:
 
     x = int(browser.find_element(By.CSS_SELECTOR, "#input_value").text)
     y = calc(x)
-    
+
+
     browser.find_element(By.CSS_SELECTOR, ".form-control").send_keys(y)
     button = browser.find_element(By.XPATH, "//button[text()='Submit']")
     button.click()
@@ -26,6 +27,6 @@ try:
 
 finally:
     # успеваем скопировать код за 30 секунд
-    time.sleep(30)
+    time.sleep(15)
     # закрываем браузер после всех манипуляций
     browser.quit()
