@@ -15,8 +15,10 @@ try:
 
     WebDriverWait(browser, 12).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, "#price"), "100"))
     button = browser.find_element(By.CSS_SELECTOR, "#book").click()
+
     x = int(browser.find_element(By.CSS_SELECTOR, "#input_value").text)
     y = calc(x)
+    
     browser.find_element(By.CSS_SELECTOR, ".form-control").send_keys(y)
     button = browser.find_element(By.XPATH, "//button[text()='Submit']")
     button.click()
